@@ -1,3 +1,9 @@
+# 42
+*DS_Store
+main.c
+*.vscode
+
+
 # Prerequisites
 *.d
 
