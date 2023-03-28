@@ -6,7 +6,7 @@
 #    By: llord <llord@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/22 12:48:17 by llord             #+#    #+#              #
-#    Updated: 2023/03/28 13:37:48 by llord            ###   ########.fr        #
+#    Updated: 2023/03/28 13:38:47 by llord            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,14 +127,13 @@ OBJS 		= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
 
 OBJSF	=	.cache_exists
 
-all:$(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@echo "$(GREEN)Libft compiled!$(DEF_COLOR)"
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c | $(OBJSF)
-	@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"
 	@$(CC) $(CFLAGS) $(SRCS_DIR) -c $< -o $@
 
 $(OBJSF):
