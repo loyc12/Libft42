@@ -6,35 +6,85 @@
 #    By: llord <llord@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/22 12:48:17 by llord             #+#    #+#              #
-#    Updated: 2022/04/23 11:28:27 by llord            ###   ########.fr        #
+#    Updated: 2023/03/28 13:48:38 by llord            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#Standard
+#------------------------------------------------------------------------------#
+#                                   COLOURS                                    #
+#------------------------------------------------------------------------------#
 
-NAME		=	libft.a
-#INCLUDES	=	../include
-SRCS_DIR 	=	./
-OBJS_DIR	=	obj/
+DEF_COLOR	=\033[0;39m
+NC			=\033[0;39m
+MAGENTA		=\033[1;95m
+LMAGENTA	=\033[1;95m
+RED			=\033[1;91m
+LRED		=\033[1;91m
+YELLOW		=\033[1;93m
+LYELLOW		=\033[1;93m
+GREEN		=\033[1;92m
+LGREEN		=\033[1;92m
+CYAN		=\033[1;96m
+LCYAN		=\033[1;96m
+BLUE		=\033[1;94m
+GRAY		=\033[1;90m
+WHITE		=\033[1;97m
+
+# RED		: Deletion done (major)
+# MAGENTA	: Deletion done (minor)
+
+# YELLOW	: Task started
+# GREEN		: Task done
+
+# CYAN		: Creation done
+# BLUE		: Installation done
+
+#------------------------------------------------------------------------------#
+#                                   GENERICS                                   #
+#------------------------------------------------------------------------------#
+
+# Special variables
+DEFAULT_GOAL: all
+.DELETE_ON_ERROR: $(NAME)
+.PHONY: all re \
+		clean clear \
+		fclean fclear \
+		norm \
+
+
+#------------------------------------------------------------------------------#
+#                                    FLAGS                                     #
+#------------------------------------------------------------------------------#
+
+CFLAGS	=	-Wall -Werror -Wextra $(XFLAGS)
+
+# Comment the line bellow to have verbose cmds:
+HIDE	=	@
+
+# Extra flags
+# Use "export XFLAGS= {flags} " to add extra compilation flags
+# Potential flags to use :
+# -g					for debug mode
+# -fsanitize=thread		to see race conditions
+
+#------------------------------------------------------------------------------#
+#                                  VARIABLES                                   #
+#------------------------------------------------------------------------------#
+
+# Compiler, flags and shortcuts
 CC			=	gcc
 CFLAGS		=	-Wall -Werror -Wextra -I
 RM			=	rm -f
 AR			=	ar rc
 
-#Colors
+# Executable name
+NAME		=	libft.a
 
-DEF_COLOR = \033[0;39m
-GRAY = \033[0;90m
-RED = \033[0;91m
-GREEN = \033[0;92m
-YELLOW = \033[0;93m
-BLUE = \033[0;94m
-MAGENTA = \033[0;95m
-CYAN = \033[0;96m
-WHITE = \033[0;97m
+# Directory names
+SRCS_DIR 	=	./
+OBJS_DIR	=	obj/
 
-#Sources
-
+# Source file names (prefix their subdir if needed)
 FTFD_DIR	=	ft_fd/
 FTFD		=	ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
 
@@ -70,46 +120,54 @@ SRC_FILES+=$(addprefix $(FTTO_DIR),$(FTTO))
 SRCS 		= 	$(addprefix $(SRCS_DIR), $(addsuffix .c, $(SRC_FILES)))
 OBJS 		= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRC_FILES)))
 
-###
 
-OBJSF		=	.cache_exists
+#------------------------------------------------------------------------------#
+#                                 BASE TARGETS                                 #
+#------------------------------------------------------------------------------#
 
-all:		$(NAME)
+OBJSF	=	.cache_exists
 
-$(NAME):	$(OBJS)
-			@$(AR) $(NAME) $(OBJS)
-			@echo "$(GREEN)Libft compiled!$(DEF_COLOR)"
+all: $(NAME)
+
+$(NAME): $(OBJS)
+	@$(AR) $(NAME) $(OBJS)
+	@echo "$(GREEN)Libft compiled!$(DEF_COLOR)"
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.c | $(OBJSF)
-			@echo "$(YELLOW)Compiling: $< $(DEF_COLOR)"	
-			@$(CC) $(CFLAGS) $(SRCS_DIR) -c $< -o $@	
-#@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) $(CFLAGS) $(SRCS_DIR) -c $< -o $@
 
 $(OBJSF):
-			@mkdir -p $(OBJS_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTFD_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTIS_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTLST_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTMEM_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTPUT_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTSTR_DIR)
-			@mkdir -p $(OBJS_DIR)$(FTTO_DIR)
+	@mkdir -p $(OBJS_DIR)
+	@mkdir -p $(OBJS_DIR)$(FTFD_DIR)
+	@mkdir -p $(OBJS_DIR)$(FTIS_DIR)
+	@mkdir -p $(OBJS_DIR)$(FTLST_DIR)
+	@mkdir -p $(OBJS_DIR)$(FTMEM_DIR)
+	@mkdir -p $(OBJS_DIR)$(FTPUT_DIR)
+	@mkdir -p $(OBJS_DIR)$(FTSTR_DIR)
+	@mkdir -p $(OBJS_DIR)$(FTTO_DIR)
 
+#------------------------------------------------------------------------------#
+#                               CLEANING TARGETS                               #
+#------------------------------------------------------------------------------#
+
+clear: clean
 clean:
-			@$(RM) -rf $(OBJS_DIR)
-			@$(RM) -f $(OBJSF)
-			@echo "$(BLUE)libft objects files cleaned!$(DEF_COLOR)"
+	@$(RM) -rf $(OBJS_DIR)
+	@$(RM) -f $(OBJSF)
+	@echo "$(MAGENTA)libft object files cleaned$(DEF_COLOR)"
 
-fclean:		clean
-			@$(RM) -f $(NAME)
-			@echo "$(CYAN)libft executable files cleaned!$(DEF_COLOR)"
+fclear: fclean
+fclean:	clean
+	@$(RM) -f $(NAME)
+	@echo "$(RED)libft.a cleaned$(DEF_COLOR)"
 
-re:			fclean all
-			@echo "$(GREEN)Cleaned and rebuilt everything for libft!$(DEF_COLOR)"
+re:	fclean all
+
+#------------------------------------------------------------------------------#
+#                               SHORTCUT TARGETS                               #
+#------------------------------------------------------------------------------#
 
 norm:
-	@norminette $(SRCS) | grep -v Norme -B1 || true 
-# @norminette $(INCLUDES) | grep -v Norme -B1 || true
-	
-
-.PHONY:		all clean fclean re norm
+	norm:
+	@norminette $(SRCS) | grep Error:
+	@norminette ./libft.h | grep Error:
