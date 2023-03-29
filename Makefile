@@ -6,7 +6,7 @@
 #    By: llord <llord@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/22 12:48:17 by llord             #+#    #+#              #
-#    Updated: 2023/03/29 09:55:15 by llord            ###   ########.fr        #
+#    Updated: 2023/03/29 09:57:20 by llord            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -161,7 +161,7 @@ clear: clean
 clean:
 	@$(RM) -rf $(OBJS_DIR)
 	@$(RM) -f $(OBJSF)
-	@echo "$(MAGENTA)Delted libft object files$(DEFCOL)"
+#@echo "$(MAGENTA)Delted libft object files$(DEFCOL)"
 
 fclear: fclean
 fclean:	clean
