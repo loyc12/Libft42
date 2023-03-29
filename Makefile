@@ -6,7 +6,7 @@
 #    By: llord <llord@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/22 12:48:17 by llord             #+#    #+#              #
-#    Updated: 2023/03/28 13:49:11 by llord            ###   ########.fr        #
+#    Updated: 2023/03/29 09:55:15 by llord            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,20 +14,27 @@
 #                                   COLOURS                                    #
 #------------------------------------------------------------------------------#
 
-DEF_COLOR	=\033[0;39m
-NC			=\033[0;39m
+# Dark colours (Becomes light if bold)
+DMAGENTA	=\033[0;35m
+DRED		=\033[0;31m
+DYELLOW		=\033[0;33m
+DGREEN		=\033[0;32m
+DCYAN		=\033[0;36m
+DBLUE		=\033[0;34m
+
+# Light colours
 MAGENTA		=\033[1;95m
-LMAGENTA	=\033[1;95m
 RED			=\033[1;91m
-LRED		=\033[1;91m
 YELLOW		=\033[1;93m
-LYELLOW		=\033[1;93m
 GREEN		=\033[1;92m
-LGREEN		=\033[1;92m
 CYAN		=\033[1;96m
-LCYAN		=\033[1;96m
 BLUE		=\033[1;94m
+
+# Grayscale colours
+DEFCOL		=\033[0m
+BLACK		=\033[1;30m
 GRAY		=\033[1;90m
+LGRAY		=\033[1;37m
 WHITE		=\033[1;97m
 
 # RED		: Deletion done (major)
@@ -154,12 +161,12 @@ clear: clean
 clean:
 	@$(RM) -rf $(OBJS_DIR)
 	@$(RM) -f $(OBJSF)
-	@echo "$(MAGENTA)libft object files cleaned$(DEF_COLOR)"
+	@echo "$(MAGENTA)Delted libft object files$(DEFCOL)"
 
 fclear: fclean
 fclean:	clean
 	@$(RM) -f $(NAME)
-	@echo "$(RED)libft.a cleaned$(DEF_COLOR)"
+	@echo "$(RED)Deleted libft.a$(DEFCOL)"
 
 re:	fclean all
 
