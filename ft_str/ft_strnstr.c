@@ -6,16 +6,15 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:37:19 by llord             #+#    #+#             */
-/*   Updated: 2022/04/12 09:59:04 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:41 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//finds the first occurence of a string in another string
-
 static	int	isnotmatch(char *hay, char *nee, unsigned int position, size_t len);
 
+//finds the first occurence of a string in another string
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	unsigned int	i;

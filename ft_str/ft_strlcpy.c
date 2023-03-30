@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 15:09:51 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 12:11:13 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:44 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //copies a string onto another
-
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;

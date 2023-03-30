@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 21:30:32 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 12:09:29 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:49 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //finds the lenght of a string
-
 size_t	ft_strlen(const char *s)
 {
 	int	i;

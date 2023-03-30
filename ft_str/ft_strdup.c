@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:34:38 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 12:10:33 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:48 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //duplicates a given string
-
 char	*ft_strdup(const char *s1)
 {
 	int		i;

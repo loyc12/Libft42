@@ -6,7 +6,7 @@
 #    By: llord <llord@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/22 12:48:17 by llord             #+#    #+#              #
-#    Updated: 2023/03/29 09:57:20 by llord            ###   ########.fr        #
+#    Updated: 2023/03/30 11:45:30 by llord            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,10 +103,10 @@ FTLST		=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \
 				ft_lstiter ft_lstlast ft_lstmap ft_lstnew ft_lstsize
 
 FTMEM_DIR	=	ft_mem/
-FTMEM		=	ft_bzero ft_calloc ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset
+FTMEM		=	ft_bzero ft_calloc ft_free ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset
 
 FTPUT_DIR	=	ft_put/
-FTPUT		=	ft_putbase ft_putnbr ft_putstr
+FTPUT		=	ft_putbase ft_puterr ft_putnbr ft_putstr
 
 FTSTR_DIR	=	ft_str/
 FTSTR		=	ft_split ft_strchr ft_strdup ft_striteri ft_strjoin \

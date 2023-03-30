@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:05:48 by llord             #+#    #+#             */
-/*   Updated: 2022/04/19 14:17:38 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:43 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //writes a number in a given base
-
 void	ft_putbase(unsigned long n, unsigned long base, char *baselist)
 {
 	char	digit;

@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:07:44 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 15:44:43 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:47:26 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //checks is a char is alphanumeric
-
 int	ft_isalnum(int c)
 {
 	if (('A' <= c && c <= 'Z')

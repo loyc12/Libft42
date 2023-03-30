@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:35:19 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 15:48:27 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:04 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //adds a string to the end of another
-
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

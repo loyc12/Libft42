@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:34:38 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 15:51:52 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:36 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //copies only part of a string into a new string
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;

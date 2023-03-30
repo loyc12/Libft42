@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:07:47 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 15:44:35 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:45:05 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //mallocs a memory location and fills it with zeros
-
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;

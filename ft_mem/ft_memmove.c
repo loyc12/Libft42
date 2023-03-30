@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 11:44:13 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 15:53:05 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:45:05 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //copies a given memory location onto another (safe)
-
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char		*d;

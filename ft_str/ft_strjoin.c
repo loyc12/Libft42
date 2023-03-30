@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:35:19 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 12:05:10 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:49 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //creates a new string that is the sum of two other strings
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;

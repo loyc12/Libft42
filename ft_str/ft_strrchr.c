@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:34:38 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 15:49:12 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:41 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //finds the latest instance of a specified char in a given string
-
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*ptr;

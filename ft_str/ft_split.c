@@ -6,19 +6,18 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:35:19 by llord             #+#    #+#             */
-/*   Updated: 2022/04/14 15:43:32 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:47 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-//does black magic to split a string into an array of substrings
 
 static int		word_count(char const *s, char c);
 static int		word_lenght(char const *s, char c, int start);
 static int		next_word(char const *s, char c, int start);
 static char		*fill_word(char const *s, char c, int start);
 
+//does black magic to split a string into an array of substrings
 char	**ft_split(char const *s, char c)
 {
 	char	**output;

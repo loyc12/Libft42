@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:05:48 by llord             #+#    #+#             */
-/*   Updated: 2022/04/23 11:21:37 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:42 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //writes a number onto the terminal
-
 static	char	digitfinder(int number, int position)
 {
 	int		digit;

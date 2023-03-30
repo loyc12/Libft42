@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:07:56 by llord             #+#    #+#             */
-/*   Updated: 2022/04/12 12:04:18 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:46:43 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //creates a new string from applying f to another string
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*output;

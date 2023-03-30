@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 11:38:41 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 12:12:34 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:47:46 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //writes a char onto a file
-
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);

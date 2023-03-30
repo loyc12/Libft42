@@ -6,14 +6,13 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:07:56 by llord             #+#    #+#             */
-/*   Updated: 2022/04/07 15:45:08 by llord            ###   ########.fr       */
+/*   Updated: 2023/03/30 11:47:25 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //checks is a char is printable
-
 int	ft_isprint(int c)
 {
 	if (32 <= c && c <= 126)
