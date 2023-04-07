@@ -6,7 +6,7 @@
 #    By: llord <llord@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/22 12:48:17 by llord             #+#    #+#              #
-#    Updated: 2023/03/30 11:45:30 by llord            ###   ########.fr        #
+#    Updated: 2023/04/07 10:24:03 by llord            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ FTFD_DIR	=	ft_fd/
 FTFD		=	ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
 
 FTIS_DIR	=	ft_is/
-FTIS		=	ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint
+FTIS		=	ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint ft_isspace
 
 FTLST_DIR	=	ft_lst/
 FTLST		=	ft_lstadd_back ft_lstadd_front ft_lstclear ft_lstdelone \
