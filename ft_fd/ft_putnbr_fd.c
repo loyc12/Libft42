@@ -6,7 +6,7 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 15:05:48 by llord             #+#    #+#             */
-/*   Updated: 2023/03/30 11:47:42 by llord            ###   ########.fr       */
+/*   Updated: 2023/06/13 14:05:36 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ static	int	lenghtfinder(int number)
 	}
 	return (lenght);
 }
+
 //writes a number onto a file
 void	ft_putnbr_fd(int n, int fd)
 {

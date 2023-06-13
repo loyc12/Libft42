@@ -6,7 +6,7 @@
 /*   By: llord <llord@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 13:33:14 by llord             #+#    #+#             */
-/*   Updated: 2022/07/11 15:22:52 by llord            ###   ########.fr       */
+/*   Updated: 2023/06/13 14:06:28 by llord            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	*ft_math_exp(int n, int e)
 	{
 		while (e-- > 0 && n != 0)
 			result *= n;
-		return (result); 
+		return (result);
 	}
 	else
-		return (void);
+		return (0);
 }
